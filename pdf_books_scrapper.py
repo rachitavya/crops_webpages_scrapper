@@ -36,5 +36,5 @@ def scrapping():
     return res
 
 print(scrapping())
-with open("pdf_data.json", "w") as outfile: 
+with open("output/pdf_data.json", "w") as outfile: 
     json.dump(scrapping(), outfile)

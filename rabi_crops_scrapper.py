@@ -173,5 +173,5 @@ for crop in rabi_crops:
 print('****************')
 print(crop_json_data)
 print(len(crop_json_data))  
-with open("crop_data.json", "w") as outfile: 
+with open("output/crop_data.json", "w") as outfile: 
     json.dump(crop_json_data, outfile)
