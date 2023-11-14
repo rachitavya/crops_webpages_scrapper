@@ -9,8 +9,13 @@ def table_dict(table):
         rjson={}
         tds=row.find_all('td')
 
-        rjson['Title']=tds[1].text.strip()
-        rjson['URL']=f"https://upagripardarshi.gov.in/{tds[1].a['href'][3:]}"
+        title=tds[1].text.strip()
+        rjson['Title']=title
+
+        url=f"https://upagripardarshi.gov.in/{tds[1].a['href'][3:]}"
+        rjson['URL']=url
+        print(f'downloading{title}.pdf')
+        download_pdf(url,f'output/books_pdf/{title}.pdf')
 
         type_str=tds[2].text.strip()
         type_split=type_str.split('|')
@@ -35,6 +40,29 @@ def scrapping():
     
     return res
 
-print(scrapping())
-with open("output/pdf_data.json", "w") as outfile: 
-    json.dump(scrapping(), outfile)
+def download_pdf(url, save_path):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Check for HTTP errors
+
+        with open(save_path, 'wb') as pdf_file:
+            pdf_file.write(response.content)
+
+        print(f"PDF downloaded successfully and saved to: {save_path}")
+
+    except requests.exceptions.HTTPError as errh:
+        print(f"HTTP Error: {errh}")
+
+    except requests.exceptions.ConnectionError as errc:
+        print(f"Error Connecting: {errc}")
+
+    except requests.exceptions.Timeout as errt:
+        print(f"Timeout Error: {errt}")
+
+    except requests.exceptions.RequestException as err:
+        print(f"Request Exception: {err}")
+
+
+pdf_log=scrapping()
+with open("output/books_pdf/pdf_log.json", "w") as outfile: 
+    json.dump(pdf_log, outfile)
