@@ -44,8 +44,6 @@ for crop in rabi_crops:
         <title>Sample HTML to PDF</title>
     </head>
     <body>
-        <h1>Hello, WeasyPrint!</h1>
-        <p>This is a simple example HTML file.</p>
         {html_content}
     </body>
     </html>'''
