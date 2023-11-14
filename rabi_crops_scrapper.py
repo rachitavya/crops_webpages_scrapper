@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 secret_api_key = os.environ.get('SECRET_KEY')
 
 def table_parser(table):
-    api_key='secret_api_key'
+    api_key=secret_api_key
     openAI_url="https://api.openai.com/v1/chat/completions"
 
     header={
