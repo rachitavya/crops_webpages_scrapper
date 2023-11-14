@@ -1,5 +1,5 @@
 # crops_webpages_scrapper
-This is an under development scrapper repository where I am using python to scrap information from this [link](https://upagripardarshi.gov.in/StaticPages/IllustratedTechnicalBook.aspx).
+This is an under development scrapper repository where I am using python to scrap information from this [link](https://upagripardarshi.gov.in/StaticPages/RabhiCrop.aspx).
 
 ### Steps to run the scrapper:
 1. Open terminal and run this command to install all the required dependencies:
