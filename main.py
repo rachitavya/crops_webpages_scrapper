@@ -30,8 +30,8 @@ def scrapping(home_page):
 
 rabi_crops=extract_rabi_links()
 print(len(rabi_crops))
-html_content=''
 for crop in rabi_crops:
+    html_content=''
     try:
         print(crop)
         url=f'https://upagripardarshi.gov.in/StaticPages/{crop[2]}'

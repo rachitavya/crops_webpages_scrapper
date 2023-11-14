@@ -11,6 +11,7 @@ This is an under development scrapper repository where I am using python to scra
 3. Check the output pdf files for every crop in `output/rabi_crops_pdf` folder
 
 #### For JSON Output
-2. Run rabi_crops_scrapper.py
+2. Put your OpenAI API key in a .env file
+3. Run rabi_crops_scrapper.py
 `python3 python main.py`
-3. Check the output pdf files for every crop in `output/rabi_crops_json` folder
+4. Check the output pdf files for every crop in `output/rabi_crops_json` folder
