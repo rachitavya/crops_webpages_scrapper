@@ -21,5 +21,5 @@ This is an under development scrapper repository where I am using python to scra
 #### For JSON Output
 2. Put your OpenAI API key in a .env file
 3. Run rabi_crops_scrapper.py
-`python3 python main.py`
+`python3 python rabi_crops_scrapper.py`
 4. Check the output pdf files for every crop in `output/rabi_crops_json` folder
